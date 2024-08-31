@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Bank Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question Bank Management</h1>
+
+        <!-- Search Bar -->
+        <div class="form-group">
+            <label for="search">Search Questions:</label>
+            <input type="text" id="search" name="search" placeholder="Search by keyword, category, or tag">
+        </div>
+
+        <!-- Add New Question Button -->
+        <div class="form-group">
+            <button id="add-question-btn">Add New Question</button>
+        </div>
+
+        <!-- Question List -->
+        <div class="question-list">
+            <h2>All Questions</h2>
+            <div class="filter-options">
+                <label for="filter-type">Filter by Type:</label>
+                <select id="filter-type">
+                    <option value="all">All</option>
+                    <option value="multiple-choice">Multiple Choice</option>
+                    <option value="short-answer">Short Answer</option>
+                    <option value="essay">Essay</option>
+                    <option value="true-false">True/False</option>
+                </select>
+
+                <label for="filter-difficulty">Filter by Difficulty:</label>
+                <select id="filter-difficulty">
+                    <option value="all">All</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <label for="filter-subject">Filter by Subject:</label>
+                <select id="filter-subject">
+                    <option value="all">All</option>
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                </select>
+            </div>
+
+            <!-- List of Questions -->
+            <ul id="question-list">
+                <li>
+                    <span>Question 1: What is 2+2?</span>
+                    <span>Type: Multiple Choice | Difficulty: Easy</span>
+                    <span>Tags: Math, Basic</span>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </li>
+                <!-- More questions can be listed here -->
+            </ul>
+        </div>
+
+        <!-- Category and Tags -->
+        <div class="form-group">
+            <h2>Organize by Category and Tags</h2>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" placeholder="Enter category name">
+
+            <label for="tags">Tags:</label>
+            <input type="text" id="tags" name="tags" placeholder="Enter tags separated by commas">
+        </div>
+
+        <!-- Import/Export Questions -->
+        <div class="form-group">
+            <h2>Import/Export Questions</h2>
+            <button id="import-btn">Import Questions</button>
+            <button id="export-btn">Export Questions</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
